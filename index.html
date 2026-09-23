@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Template &bull; Lorem Ipsum</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div id="container">
+  <div id="headerArea">
+    <div id="header"></div>
+    <nav id="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="#">GitHub</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div id="flex">
+    <main>
+      <h1>Lorem Ipsum Dolor</h1>
+      <p><strong>Consectetur Adipiscing &bull; Eiusmod Tempor &bull; Incididunt Labore</strong></p>
+
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</p>
+
+      <!-- Low-Level Systems Canvas Engine -->
+      <div class="canvas-frame">
+        <div class="canvas-frame-header">
+          <span>[SUBSYSTEM: BUFFER-0]</span>
+          <span id="canvas-status">STATUS: IDLE</span>
+        </div>
+        <canvas id="kernel-display" width="600" height="200"></canvas>
+      </div>
+
+      <h2>Section Header</h2>
+      <ul>
+        <li><strong>Topic Alpha:</strong> Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+        <li><strong>Topic Beta:</strong> Ut enim ad minim veniam, quis nostrud exercitation ullamco.</li>
+        <li><strong>Topic Gamma:</strong> Duis aute irure dolor in reprehenderit in voluptate velit esse.</li>
+      </ul>
+
+      <h2>Placeholder Sample</h2>
+      <pre><code>(module
+  (memory (export "memory") 1)
+  (func (export "init")
+    ;; Direct memory initialization or rasterizer loop
+  )
+)</code></pre>
+    </main>
+
+    <aside id="rightSidebar">
+      <h2>Node Status</h2>
+      <div class="box">
+        <p>Host: <strong>Localhost / Static</strong></p>
+        <ul style="padding-left:12px; margin: 0;">
+          <li>Status: Development</li>
+          <li>Framework: None</li>
+          <li>Engine: Standalone</li>
+        </ul>
+      </div>
+
+      <h2>Index</h2>
+      <ul>
+        <li><a href="cv.html">Curriculum Vitae</a></li>
+        <li><a href="projects.html">Projects Archive</a></li>
+        <li><a href="#">Contact / PGP</a></li>
+      </ul>
+    </aside>
+  </div>
+
+  <footer id="footer">
+    <p>&copy; 2026 Project Template &bull;</p>
+  </footer>
+</div>
+
+<script>
+  const canvas = document.getElementById('kernel-display');
+  const ctx = canvas.getContext('2d');
+  ctx.fillStyle = '#05020a';
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = '#ea638c';
+  ctx.font = '12px monospace';
+  ctx.fillText('Interactive canvas buffer mounted successfully...', 20, 100);
+</script>
+</body>
+</html>
