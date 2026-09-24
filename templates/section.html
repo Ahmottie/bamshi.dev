@@ -3,15 +3,18 @@
 {% block title %}Posts &bull; {{ config.title }}{% endblock title %}
 
 {% block content %}
-<h1>{{ section.title | default(value="Posts") }}</h1>
-{{ section.content | safe }}
+  <h1>{{ section.title | default(value="Posts") }}</h1>
+  {{ section.content | safe }}
 
-<ul class="posts-list">
+  <div class="archive-list">
     {% for post in section.pages %}
-    <li>
-        <span>{{ post.date | date(format="%Y-%m-%d") }}</span> &mdash;
-        <a href="{{ post.permalink }}">{{ post.title }}</a>
-    </li>
+      <article class="archive-item">
+        <span class="post-date">{{ post.date | date(format="%Y-%m-%d") }}</span>
+        <h3><a href="{{ post.permalink }}">{{ post.title }}</a></h3>
+        {% if post.description %}
+          <p class="post-summary">{{ post.description }}</p>
+        {% endif %}
+      </article>
     {% endfor %}
-</ul>
+  </div>
 {% endblock content %}

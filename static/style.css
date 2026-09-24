@@ -183,3 +183,74 @@ code {
   #rightSidebar { order: 3; }
   #navbar ul { flex-wrap: wrap; height: auto; }
 }
+
+.post-date {
+  font-size: 0.85rem;
+  color: #a0a0a0;
+  font-family: monospace;
+}
+
+.posts-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.posts-list li {
+  margin-bottom: 0.5rem;
+}
+
+.posts-list a {
+  margin-left: 0.5rem;
+}
+
+.archive-item {
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #333;
+  padding-bottom: 1rem;
+}
+
+.archive-item h3 {
+  margin: 0.2rem 0;
+}
+
+.post-summary {
+  margin: 0.25rem 0 0;
+  font-size: 0.95rem;
+  color: #bbb;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+}
+
+th, td {
+  border: 1px solid #444;
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+
+th {
+  background-color: #222;
+}
+
+pre {
+  background-color: #1e1e1e;
+  padding: 1rem;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+code {
+  font-family: monospace;
+}
+
+blockquote {
+  margin: 1rem 0;
+  padding-left: 1rem;
+  border-left: 3px solid #8b0000;
+  color: #ccc;
+  font-style: italic;
+}

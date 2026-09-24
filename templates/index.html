@@ -1,6 +1,27 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <h1>{{ section.title | default(value="Welcome") }}</h1>
-  {{ section.content | safe }}
+  <section class="intro">
+    <h1>{{ section.title | default(value="Welcome") }}</h1>
+    {{ section.content | safe }}
+  </section>
+
+  <hr>
+
+  <section class="recent-posts">
+    <h2>Recent Posts</h2>
+    {% set posts_section = get_section(path="posts/_index.md") %}
+    <ul class="posts-list">
+      {% for post in posts_section.pages %}
+        {% if loop.index <= 3 %}
+          <li>
+            <span class="post-date">{{ post.date | date(format="%Y-%m-%d") }}</span>
+            <a href="{{ post.permalink }}">{{ post.title }}</a>
+          </li>
+        {% endif %}
+      {% else %}
+        <li>No posts published yet.</li>
+      {% endfor %}
+    </ul>
+  </section>
 {% endblock content %}
