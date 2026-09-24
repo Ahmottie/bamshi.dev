@@ -1,0 +1,6 @@
+base_url = "https://bamshi.dev"
+title = "Bamshi"
+description = "Personal site"
+default_language = "en"
+compile_sass = false
+minify_html = true

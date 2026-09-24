@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div id="container">
+    <div id="headerArea">
+        <div id="header"></div>
+        <nav id="navbar">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/cv/">CV</a></li>
+                <li><a href="/projects/">Projects</a></li>
+                <li><a href="/posts/">Posts</a></li>
+                <li><a href="https://github.com/ahmottie" target="_blank" rel="noopener">GitHub</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="flex">
+        <main>
+            {% block content %}{% endblock content %}
+        </main>
+
+        {% block sidebar %}
+        <aside id="rightSidebar">
+            <h2>Quick Info</h2>
+            <div class="box">
+                <p>Placeholder metadata sidebar.</p>
+            </div>
+        </aside>
+        {% endblock sidebar %}
+    </div>
+
+    <footer id="footer">
+        <p>&copy; {{ now() | date(format="%Y") }} {{ config.title }} &bull; Built with Zola</p>
+    </footer>
+</div>
+</body>
+</html>
